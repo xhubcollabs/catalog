@@ -1,8 +1,8 @@
 {
   "name": "hub4u-menu",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "Crie seu cardápio online",
+  "productName": "Hub4u",
   "author": "Francismar Araujo <francismarsaraujo@gmail.com>",
   "private": true,
   "scripts": {
