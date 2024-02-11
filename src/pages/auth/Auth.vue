@@ -8,7 +8,7 @@
         {{ subTitle }}
       </div>
       <div class="col-12">
-        <phone-auth
+        <email-auth
           v-if="mode === 'get-code'"
           @code-sended="onCodeSended"
         />
@@ -34,6 +34,7 @@ import { mapGetters } from 'vuex';
 import { IUser } from '@models/IUser';
 
 import PhoneAuth from './PhoneAuth.vue';
+import EmailAuth from './EmailAuth.vue';
 import RegisterForm from './RegisterForm.vue';
 import ValidateCodeForm from './ValidateCodeForm.vue';
 
@@ -46,6 +47,7 @@ enum AuthMode {
 @Options({
   components: {
     PhoneAuth,
+    EmailAuth,
     RegisterForm,
     ValidateCodeForm,
   },

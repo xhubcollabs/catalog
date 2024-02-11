@@ -48,7 +48,11 @@ export async function refreshToken(
 
 export async function getAuthCodeByPhone(phone: string): Promise<never> {
   const response = await api.post<never>('users/get-code-by-phone', { phone });
+  return response.data;
+}
 
+export async function getAuthCodeByEmail(email: string): Promise<never> {
+  const response = await api.post<never>('users/get-code-by-email', { email });
   return response.data;
 }
 

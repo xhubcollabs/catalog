@@ -21,6 +21,22 @@
       </v-field>
       <v-field
         v-slot="{ field, handleChange, errorMessage }"
+        :label="$t('auth.phone')"
+        name="phone"
+        rules="required|min:14"
+      >
+        <q-input
+          inputmode="tel"
+          :label="$t('auth.phone')"
+          :mask="getPhoneMask(field.value)"
+          :model-value="field.value"
+          :error="!!errorMessage"
+          :error-message="errorMessage"
+          @update:modelValue="handleChange"
+        />
+      </v-field>
+      <v-field
+        v-slot="{ field, handleChange, errorMessage }"
         :label="$t('auth.code')"
         name="code"
         rules="required|min:6"
@@ -76,6 +92,10 @@ export default class Auth extends Vue {
   @Prop({ required: true }) codeId!: string;
 
   loading: boolean = false;
+
+  getPhoneMask(phone: string = '') {
+    return phone.length <= 14 ? '(##) ####-#####' : '(##) #####-####';
+  }
 
   async register(signInData: IRegisterData) {
     try {

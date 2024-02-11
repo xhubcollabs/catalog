@@ -1,12 +1,13 @@
 export default {
   title: 'Minha conta',
-  getCodeText: 'Utilize seu número de telefone para acessar ou criar sua conta',
+  getCodeText: 'Utilize seu e-mail para acessar ou criar sua conta',
   registerText: 'Informe o código abaixo e informe seus dados pessoais',
-  validateCodeText: 'Informe o código que você recebeu por SMS.',
+  validateCodeText: 'Informe o código que você recebeu por E-mail.',
   phone: 'Celular',
-  getCode: 'Receber SMS',
+  email: 'E-mail',
+  getCode: 'Receber código no e-mail',
   name: 'Nome',
-  code: 'Código do SMS',
+  code: 'Código',
   submitCode: 'Acessar minha conta',
   submitRegister: 'Criar sua conta',
 };
