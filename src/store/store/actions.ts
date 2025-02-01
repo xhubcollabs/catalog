@@ -27,7 +27,7 @@ const actions: ActionTree<IStoreState, StateInterface> = {
         },
       });
     } catch (error) {
-      location.href = 'https://hub4u.app';
+      location.href = 'https://x-hub.co';
     }
   },
 };
